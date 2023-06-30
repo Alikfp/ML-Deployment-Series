@@ -2,3 +2,4 @@ ml_deply_flask/
 *.pem
 *.json
 *.DS_Store
+general_deployment/general_ml_deploy/
