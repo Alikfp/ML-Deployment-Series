@@ -8,3 +8,11 @@ Tech-stack:
 - Flask
 - Docker
 - EC2 deployment
+
+## 2. Classifier web service
+- A recommendation system.
+Improves based on user input.
+- Stores user inputs (Has an associated Data base)
+- Re-trains on the inputs
+- Has UI
+
