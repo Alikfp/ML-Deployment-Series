@@ -1,8 +1,8 @@
 from django.test import TestCase
-# add at the beginning of the file:
+
+from apps.ml.income_classifier.random_forest import RandomForestClassifier
 import inspect
 from apps.ml.registry import MLRegistry
-from apps.ml.income_classifier.random_forest import RandomForestClassifier
 
 class MLTests(TestCase):
     def test_rf_algorithm(self):
@@ -28,7 +28,6 @@ class MLTests(TestCase):
         self.assertTrue('label' in response)
         self.assertEqual('<=50K', response['label'])
 
-
     def test_registry(self):
         registry = MLRegistry()
         self.assertEqual(len(registry.endpoints), 0)
@@ -37,7 +36,7 @@ class MLTests(TestCase):
         algorithm_name = "random forest"
         algorithm_status = "production"
         algorithm_version = "0.0.1"
-        algorithm_owner = "Alireza"
+        algorithm_owner = "Piotr"
         algorithm_description = "Random Forest with simple pre- and post-processing"
         algorithm_code = inspect.getsource(RandomForestClassifier)
         # add to registry
