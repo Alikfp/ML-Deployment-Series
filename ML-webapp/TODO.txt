@@ -1,0 +1,2 @@
+Use starting script
+Use model registry
