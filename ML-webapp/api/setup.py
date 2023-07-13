@@ -37,17 +37,7 @@ def predict(X_test):
     return preds, probs
 
 def format_input(inp):
-    return {
-        'satisfaction_level' : [inp.satisfaction_level],
-        'last_evaluation' : [inp.last_evaluation], 
-        'number_project' : [inp.number_project],
-        'average_montly_hours' : [inp.average_montly_hours], 
-        'time_spend_company' : [inp.time_spend_company],
-        'Work_accident' : [inp.Work_accident], 
-        'promotion_last_5years' : [inp.promotion_last_5years],
-        'department' : [inp.department],
-        'salary' : [inp.salary]
-    }
+    return {k : [v] for k,v in vars(inp).items()}
 
 @app.post('/predict')
 async def func(inp:user_input):
