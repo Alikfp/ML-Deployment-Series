@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gui
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gui
+  template:
+    metadata:
+      labels:
+        app: gui
+    spec:
+      containers:
+      - name: guiapp
+        image: xyz1/gui-app:v1
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gui-app
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: gui
+  ports:
+  - port: 8501
+    targetPort: 8501
