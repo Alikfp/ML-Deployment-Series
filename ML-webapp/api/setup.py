@@ -5,7 +5,7 @@ import pandas as pd
 import json
 from joblib import load
 
-ARTIFICATS_DIR = '../ml/artifacts/'
+ARTIFICATS_DIR = 'ml/artifacts/'
 
 app = FastAPI()
 # TODO: enable using other models

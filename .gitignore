@@ -3,3 +3,5 @@ ml_deply_flask/
 *.json
 *.DS_Store
 general_deployment/general_ml_deploy/
+ML-webapp/mlWebApp
+ML-webapp/gui/mlWebAppGui

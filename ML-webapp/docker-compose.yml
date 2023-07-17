@@ -1,0 +1,10 @@
+version: '2'
+services:
+  api:
+    build: ./api
+    ports:
+      - 8000:8000
+  gui:
+    build: ./gui
+    ports:
+      - 8501:8501
