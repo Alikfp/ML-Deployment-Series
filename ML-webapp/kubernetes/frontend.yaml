@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: guiapp
-        image: xyz1/gui-app:v1
+        image: alikfp79/gui-app:v1
         imagePullPolicy: Always
 ---
 apiVersion: v1
