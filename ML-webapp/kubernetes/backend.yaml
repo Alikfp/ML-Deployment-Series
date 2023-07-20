@@ -14,8 +14,8 @@ spec:
         app: api
     spec:
       containers:
-      - name: mlapp
-        image: alikfp79/mlapp:v1
+      - name: api-image
+        image: alikfp79/api-image:v1
         imagePullPolicy: Always
 ---
 apiVersion: v1
