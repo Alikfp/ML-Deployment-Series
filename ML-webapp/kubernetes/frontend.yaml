@@ -14,8 +14,8 @@ spec:
         app: gui
     spec:
       containers:
-      - name: mlwebapp
-        image: alikfp79/mlwebapp:v1
+      - name: gui
+        image: alikfp79/gui-image:v1
         imagePullPolicy: Always
 ---
 apiVersion: v1
